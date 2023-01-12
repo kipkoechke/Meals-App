@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './categories_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,28 +12,23 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'DeliMeals',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        canvasColor: const Color.fromRGBO(255, 245, 229, 1),
+        fontFamily: 'Raleway',
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            fontSize: 20,
+            fontFamily: 'RobotoCondensed',
+            fontWeight: FontWeight.bold,
+          ),
+          bodyText1: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
+          bodyText2: TextStyle(color: Color.fromRGBO(20, 51, 51, 1)),
+        ),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
+            .copyWith(secondary: Colors.amber),
       ),
-      home: _MyHomePage(),
+
+      home: const CategoriesScreen(),
     );
   }
 }
 
-class _MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<_MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('DeliMeals'),
-      ),
-      body: const Center(
-        child: Text('Navigation Time!'),
-      ),
-    );
-  }
-}
