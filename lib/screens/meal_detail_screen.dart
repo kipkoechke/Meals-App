@@ -6,7 +6,6 @@ class MealDetailScreen extends StatelessWidget {
 
   const MealDetailScreen({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context)!.settings.arguments as String;
@@ -31,3 +30,4 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
+}
