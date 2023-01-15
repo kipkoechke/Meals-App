@@ -15,7 +15,7 @@ class MealDetailScreen extends StatelessWidget {
     );
     return Scaffold(
       appBar: AppBar(
-        title: Text(mealId),
+        title: Text(selecetedMeal.title),
       ),
       body: Column(
         children: [
