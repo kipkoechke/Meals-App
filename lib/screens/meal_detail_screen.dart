@@ -17,6 +17,7 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
+
   Widget buildContainer(Widget child) {
     return Container(
       padding: const EdgeInsets.all(10.0),
@@ -89,6 +90,12 @@ class MealDetailScreen extends StatelessWidget {
             ))
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.delete),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
       ),
     );
   }
