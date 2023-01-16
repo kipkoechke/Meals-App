@@ -35,7 +35,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
-      body: _pages[_selectedPageIndex]['title'],
+      body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         backgroundColor: Theme.of(context).colorScheme.primary,
