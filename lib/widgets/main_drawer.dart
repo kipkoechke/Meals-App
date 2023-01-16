@@ -5,7 +5,11 @@ import '../screens/filters_screen.dart';
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key});
 
-  Widget buildListTile(String title, IconData icon, VoidCallback tapHandler) {
+  Widget buildListTile(
+    String title,
+    IconData icon,
+    VoidCallback tapHandler,
+  ) {
     return ListTile(
       leading: Icon(
         icon,
@@ -50,14 +54,15 @@ class MainDrawer extends StatelessWidget {
             'Meals',
             Icons.restaurant,
             () {
-              Navigator.of(context).pushNamed('/');
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           buildListTile(
             'Filters',
             Icons.settings,
             () {
-              Navigator.of(context).pushNamed(FiltersScreen.routName);
+              Navigator.of(context)
+                  .pushReplacementNamed(FiltersScreen.routName);
             },
           ),
         ],
