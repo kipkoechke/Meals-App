@@ -5,7 +5,7 @@ import '../widgets/main_drawer.dart';
 class FiltersScreen extends StatelessWidget {
   const FiltersScreen({super.key});
 
-  static const routName = '/filters';
+  static const routeName = '/filters';
 
   @override
   Widget build(BuildContext context) {
