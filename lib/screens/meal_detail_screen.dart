@@ -6,6 +6,18 @@ class MealDetailScreen extends StatelessWidget {
 
   const MealDetailScreen({super.key});
 
+  Widget buildSectionTitle(BuildContext context, String text) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: 10.0,
+      ),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.headline1,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context)!.settings.arguments as String;
@@ -26,15 +38,7 @@ class MealDetailScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(
-              vertical: 10.0,
-            ),
-            child: Text(
-              'Ingredients',
-              style: Theme.of(context).textTheme.headline1,
-            ),
-          ),
+          buildSectionTitle(context, 'Ingredients'),
           Container(
             padding: const EdgeInsets.all(10.0),
             margin: const EdgeInsets.all(10.0),
@@ -58,6 +62,7 @@ class MealDetailScreen extends StatelessWidget {
               itemCount: selecetedMeal.ingredients.length,
             ),
           ),
+          buildSectionTitle(context, 'Steps'),
         ],
       ),
     );
