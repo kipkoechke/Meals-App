@@ -12,6 +12,10 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
+  final bool _glutenFree = false;
+  final bool _vegeterian = false;
+  final bool _vegan = false;
+  final bool _lactoseFree = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +23,16 @@ class _FiltersScreenState extends State<FiltersScreen> {
         title: const Text('Your Filters'),
       ),
       drawer: const MainDrawer(),
-      body: const Center(
-        child: Text('Filters'),
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(20),
+            child: Text(
+              'Adjust your meal selection',
+              style: Theme.of(context).textTheme.headline1,
+            ),
+          ),
+        ],
       ),
     );
   }
